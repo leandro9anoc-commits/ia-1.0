@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha IA - Histórias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <h1>Minha IA</h1>
+
+            <button id="newCharacter">
+                + Nova personagem
+            </button>
+
+            <h3>Personagens</h3>
+
+            <div id="characterList">
+                <p>Nenhuma personagem criada.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <main class="chat">
+
+            <!-- CABEÇALHO -->
+            <header class="chat-header">
+
+                <div class="character-avatar">
+                    <img id="characterAvatar" src="" alt="Foto da personagem">
+                </div>
+
+                <div>
+                    <h2 id="characterName">
+                        Minha personagem
+                    </h2>
+
+                    <p id="characterStatus">
+                        Sua história começa aqui
+                    </p>
+                </div>
+
+            </header>
+
+
+            <!-- MENSAGENS -->
+            <section id="messages" class="messages">
+
+                <div class="welcome">
+                    <h2>Bem-vindo!</h2>
+
+                    <p>
+                        Crie uma personagem, envie uma foto
+                        e comece sua própria história.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- ENVIO DE MENSAGENS -->
+            <footer class="chat-input">
+
+                <button id="uploadButton" title="Enviar foto">
+                    📷
+                </button>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Escreva sua mensagem..."
+                >
+
+                <button id="sendButton">
+                    Enviar
+                </button>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JANELA DE CRIAÇÃO DE PERSONAGEM -->
+    <div id="characterModal" class="modal" hidden>
+
+        <div class="modal-content">
+
+            <h2>Criar personagem</h2>
+
+            <label for="newName">
+                Nome da personagem
+            </label>
+
+            <input
+                type="text"
+                id="newName"
+                placeholder="Digite o nome..."
+            >
+
+            <label for="newAge">
+                Idade
+            </label>
+
+            <input
+                type="number"
+                id="newAge"
+                placeholder="Idade..."
+                min="18"
+            >
+
+            <label for="newPersonality">
+                Personalidade
+            </label>
+
+            <textarea
+                id="newPersonality"
+                placeholder="Descreva a personalidade..."
+            ></textarea>
+
+            <label for="newPhoto">
+                Foto da personagem
+            </label>
+
+            <input
+                type="file"
+                id="newPhoto"
+                accept="image/*"
+            >
+
+            <div class="modal-buttons">
+
+                <button id="saveCharacter">
+                    Criar personagem
+                </button>
+
+                <button id="closeModal">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
